@@ -52,6 +52,7 @@ public class UserController {
 	@PutMapping("/update/{userId}")
 	public ResponseEntity<ResponseMessage<String>> updateUser(@PathVariable Integer userId, @RequestBody RegistrationRequest request) throws BadRequestException{
 		userService.updateUser(userId,request);
+		System.out.println("This is not good");
 		return ResponseEntity.ok(new ResponseMessage("1","User update successfully"));
 	}
 }
